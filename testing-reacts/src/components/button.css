@@ -1,0 +1,21 @@
+.btn {
+  padding:10px;
+  border-radius: 5px;
+  color:whitesmoke;
+  margin-top: 6px;
+}
+.bordered {
+    border:1px solid gray;
+}
+
+.ghost {
+    border:none;
+}
+
+.red {
+    background-color: red;
+}
+
+.green{
+    background-color: green;
+}
