@@ -1,5 +1,6 @@
 import { fireEvent, render ,screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event"
+import renderer from "react-test-renderer"
 import App from "../App"
 import { Button } from "./Button";
 
@@ -33,6 +34,17 @@ describe("Button Test", () => {
       // userEvent.click(themeButton) 
       fireEvent.click(themeButton)
       expect(h3).toHaveTextContent("dark");
-
      })
+     test("should call given function",()=>{
+      const mockfn=jest.fn();//jest function is available from globally.
+      render(<Button onClick={mockfn}>Click me</Button>)
+      let btn=screen.getByText("Click me")
+      fireEvent.click(btn)
+      fireEvent.click(btn)
+      expect(mockfn).toBeCalledTimes(2);
+     })
+     test("Snapshot",()=>{
+      const tree= renderer.create(<Button>Counter</Button>).toJSON();
+      expect(tree).toMatchSnapshot();
+   })
 });
