@@ -27,13 +27,13 @@ describe("Button Test", () => {
 
      test("should change theme",()=>{
       render(<App></App>)
-      let h3= screen.getByText("Theme is light")
+      let h3= screen.getByText("Theme is light");
       expect(h3).toBeInTheDocument();
       expect(h3).toHaveTextContent("light");
 
       let themeButton = screen.getByText("Change Theme");
       // userEvent.click(themeButton) 
-      fireEvent.click(themeButton)
+      fireEvent.click(themeButton);
       //after clicking the button check dark text is present.
       expect(h3).toHaveTextContent("dark");
       //again click to the button and check light text is present.
