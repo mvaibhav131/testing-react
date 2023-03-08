@@ -53,5 +53,5 @@ describe("Button Test", () => {
      test("Snapshot",()=>{
       const tree= renderer.create(<Button>Counter</Button>).toJSON();
       expect(tree).toMatchSnapshot();
-   })
+   });
 });
