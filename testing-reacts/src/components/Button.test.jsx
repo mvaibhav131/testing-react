@@ -43,7 +43,7 @@ describe("Button Test", () => {
 
      test("should call given function",()=>{
       const mockfn=jest.fn();//jest function is available from globally.
-      render(<Button onClick={mockfn}>Click me</Button>)
+      render(<Button onClick={mockfn}>Click me</Button>);
       let btn=screen.getByText("Click me");
       fireEvent.click(btn);
       fireEvent.click(btn);
