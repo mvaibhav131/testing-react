@@ -14,7 +14,7 @@ describe("Button Test", () => {
     });
     
      test("should render based on testid",()=> {
-        render(<Button>Click me</Button>)
+        render(<Button>Click me</Button>);
         let button = screen.getByTestId("cButton");
         expect(button).toBeInTheDocument
      });
@@ -26,7 +26,7 @@ describe("Button Test", () => {
      });
 
      test("should change theme",()=>{
-      render(<App></App>)
+      render(<App></App>);
       let h3= screen.getByText("Theme is light");
       expect(h3).toBeInTheDocument();
       expect(h3).toHaveTextContent("light");
