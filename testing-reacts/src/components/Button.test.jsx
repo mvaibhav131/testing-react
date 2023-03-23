@@ -50,7 +50,7 @@ describe("Button Test", () => {
       expect(mockfn).toBeCalledTimes(2);
      });
 
-     test("Snapshot is ",()=>{
+     test("Snapshot is Captured",()=>{
       const tree= renderer.create(<Button>Counter</Button>).toJSON();
       expect(tree).toMatchSnapshot();
    });
