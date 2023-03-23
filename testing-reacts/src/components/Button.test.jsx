@@ -32,7 +32,7 @@ describe("Button Test", () => {
       expect(h3).toHaveTextContent("light");
 
       let themeButton = screen.getByText("Change Theme");
-      // userEvent.click(themeButton) 
+      // userEvent.click(themeButton) onclick
       fireEvent.click(themeButton);
       //after clicking the button check dark text is present.
       expect(h3).toHaveTextContent("dark");
