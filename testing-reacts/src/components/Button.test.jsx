@@ -25,7 +25,7 @@ describe("Button Test", () => {
       expect(button).toBeEmptyDOMElement();
      });
 
-     test("should change theme",()=>{
+     test("should change theme Color",()=>{
       render(<App></App>);
       let h3= screen.getByText("Theme is light");
       expect(h3).toBeInTheDocument();
